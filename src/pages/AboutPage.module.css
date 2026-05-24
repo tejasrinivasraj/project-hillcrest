@@ -1,0 +1,33 @@
+.about {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about h1 {
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+}
+
+.block {
+  background: var(--color-white);
+  padding: var(--space-xl);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-warm-border);
+}
+
+.block h2 {
+  font-size: var(--font-size-xl);
+  color: var(--color-primary);
+  margin-bottom: var(--space-md);
+}
+
+.block p {
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-relaxed);
+}

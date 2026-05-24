@@ -1,0 +1,16 @@
+.notFound {
+  text-align: center;
+  padding: var(--space-3xl) 0;
+}
+
+.notFound h1 {
+  font-size: 6rem;
+  color: var(--color-primary-light);
+  margin-bottom: var(--space-md);
+}
+
+.message {
+  font-size: var(--font-size-xl);
+  color: var(--color-text-light);
+  margin-bottom: var(--space-2xl);
+}

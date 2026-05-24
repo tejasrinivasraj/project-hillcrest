@@ -1,0 +1,113 @@
+.nav {
+  background: var(--color-white);
+  border-bottom: 1px solid var(--color-warm-border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: var(--nav-height);
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.logo span {
+  color: var(--color-primary);
+}
+
+.logo:hover {
+  color: var(--color-primary-dark);
+}
+
+.links {
+  display: flex;
+  gap: var(--space-lg);
+  align-items: center;
+}
+
+.link {
+  color: var(--color-text-light);
+  font-weight: var(--font-weight-medium);
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+  text-decoration: none;
+}
+
+.link:hover {
+  color: var(--color-primary);
+  background: var(--color-warm-surface);
+}
+
+.active {
+  color: var(--color-primary);
+  background: var(--color-warm-surface);
+}
+
+.menuToggle {
+  display: none;
+  padding: var(--space-sm);
+  border-radius: var(--radius-sm);
+}
+
+.hamburger {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--color-text);
+  position: relative;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background: var(--color-text);
+  left: 0;
+}
+
+.hamburger::before { top: -7px; }
+.hamburger::after { top: 7px; }
+
+@media (max-width: 768px) {
+  .menuToggle {
+    display: block;
+  }
+
+  .links {
+    display: none;
+    position: absolute;
+    top: var(--nav-height);
+    left: 0;
+    right: 0;
+    background: var(--color-white);
+    flex-direction: column;
+    padding: var(--space-lg);
+    border-bottom: 1px solid var(--color-warm-border);
+    box-shadow: var(--shadow-md);
+  }
+
+  .open {
+    display: flex;
+  }
+}
